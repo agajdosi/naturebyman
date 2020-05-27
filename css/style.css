@@ -136,6 +136,10 @@ ol {
 	background-position: center center;
 }
 
+.set-bg-bottom {
+	background-position: bottom center;
+}
+
 .spad {
 	padding-top: 105px;
 	padding-bottom: 105px;
