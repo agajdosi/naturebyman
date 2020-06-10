@@ -221,10 +221,11 @@
 
 
 <script>
+
   var forest = new Howl({
 	  src: ['sound/506103__jayhu__forest.mp3'],
     loop: true,
-    volume: 1.0,
+    volume: 0.2,
     autoplay: true,
     });
 
@@ -241,14 +242,20 @@
 
   console.log(sounds)
 
-  document.getElementsByClassName("fp-prev")[0].addEventListener("click", function() {
-    var randomSprite = function (obj) {
-      var keys = Object.keys(obj);
+  var prevButtons = document.getElementsByClassName("fp-controlArrow")
+  
+  for (var i = 0; i < prevButtons.length; i++) {
+    prevButtons[i].addEventListener('click', function() {
+      var randomSprite = function (obj) {
+        var keys = Object.keys(obj);
         return keys[ keys.length * Math.random() << 0];
-    };
+      };
 
-    sounds.play(randomSprite(sounds._sprite));
-  });
+      sounds.play(randomSprite(sounds._sprite));
+      console.log(fullpage_api.getActiveSection());
+      console.log(fullpage_api.getActiveSlide());
+    });
+  }
 
 </script>
 
