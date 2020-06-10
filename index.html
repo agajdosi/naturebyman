@@ -208,14 +208,50 @@
 </div>
 
 <script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript" src="js/howler.min.js"></script>
 
 <script type="text/javascript">
-    var myFullpage = new fullpage('#fullpage', {
-        verticalCentered: false,
+  var myFullpage = new fullpage('#fullpage', {
+    verticalCentered: false,
 		licenseKey: 'YOUR_KEY_HERE',
-        //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
-        css3:false
-    });
+    //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+    css3:false
+  });	
 </script>
+
+
+<script>
+  var forest = new Howl({
+	  src: ['sound/506103__jayhu__forest.mp3'],
+    loop: true,
+    volume: 1.0,
+    autoplay: false,
+    });
+
+
+  var sounds = new Howl({
+	  src: ['sound/506103__jayhu__forest.mp3'],
+    volume: 1.0,
+    sprite: {
+      ptak: [0, 300],
+      laser: [4000, 1000],
+      winner: [6000, 5000]
+      }
+    });
+
+  console.log(sounds)
+
+  document.getElementsByClassName("fp-prev")[0].addEventListener("click", function() {
+    var randomSprite = function (obj) {
+      var keys = Object.keys(obj);
+        return keys[ keys.length * Math.random() << 0];
+    };
+
+    sounds.play(randomSprite(sounds._sprite));
+  });
+
+</script>
+
+
 </body>
 </html>
