@@ -160,7 +160,8 @@
 <body>
 
 <div id="fullpage">
-	<div class="section " id="section0"><h1>Nature by Man</h1></div>
+  <div class="section " id="section0"><h1>Nature by Man</h1></div>
+  
 	<div class="section" id="section1">
 		<div class="slide" id="slide11"></div>
 		<div class="slide" id="slide12"></div>
@@ -211,38 +212,28 @@
 <script type="text/javascript" src="js/howler.min.js"></script>
 
 <script type="text/javascript">
-  var myFullpage = new fullpage('#fullpage', {
-    verticalCentered: false,
-		licenseKey: 'YOUR_KEY_HERE',
-    //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
-    css3:false
-  });	
-</script>
+
+var forest = new Howl({
+	src: ['sound/506103__jayhu__forest.mp3'],
+  loop: true,
+  volume: 0.2,
+  autoplay: true,
+});
 
 
-<script>
-
-  var forest = new Howl({
-	  src: ['sound/506103__jayhu__forest.mp3'],
-    loop: true,
-    volume: 0.2,
-    autoplay: true,
-    });
-
-
-  var sounds = new Howl({
-	  src: ['sound/506103__jayhu__forest.mp3'],
-    volume: 1.0,
-    sprite: {
-      ptak: [0, 300],
-      laser: [4000, 1000],
-      winner: [6000, 5000]
-      }
-    });
+var sounds = new Howl({
+	src: ['sound/506103__jayhu__forest.mp3'],
+  volume: 1.0,
+  sprite: {
+    ptak: [0, 300],
+    laser: [4000, 1000],
+    winner: [6000, 5000]
+  }
+});
 
   console.log(sounds)
 
-  var prevButtons = document.getElementsByClassName("fp-controlArrow")
+/*   var prevButtons = document.getElementsByClassName("fp-controlArrow")
   
   for (var i = 0; i < prevButtons.length; i++) {
     prevButtons[i].addEventListener('click', function() {
@@ -255,8 +246,52 @@
       console.log(fullpage_api.getActiveSection());
       console.log(fullpage_api.getActiveSlide());
     });
-  }
+  } */
 
+  var slideSounds = [
+    [],
+    [["ptak","laser"], ["ptak","laser"], ["ptak","laser"]],
+    [["ptak","laser"], ["ptak","laser"]],
+    [],
+    [["ptak","laser"], ["ptak","laser"], ["ptak","laser"]],
+    [["ptak","laser"], ["ptak","laser"], ["ptak","laser"]],
+    [["ptak","laser"], ["ptak","laser"], ["ptak","laser"]],
+    [["ptak","laser"], ["ptak","laser"], ["ptak","laser"]],
+    [["ptak","laser"], ["ptak","laser"], ["ptak","laser"], ["ptak","laser"]]
+  ]
+
+  var sectionSounds = [
+    ["", "laser"],
+    ["ptak", "laser"],
+    ["ptak", "laser"],
+    ["ptak", "laser"],
+    ["ptak", "laser"],
+    ["ptak", "laser"],
+    ["ptak", "laser"],
+    ["ptak", "laser"],
+    ["ptak", ""]
+  ]
+
+  var myFullpage = new fullpage('#fullpage', {
+    verticalCentered: false,
+		licenseKey: 'YOUR_KEY_HERE',
+    //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+    css3:false,
+	  onSlideLeave: function( section, origin, destination, direction){
+      var dir = 1;
+      if (direction == "left"){
+        dir = 0;  
+      }
+      sounds.play(slideSounds[section.index][origin.index][dir]);
+    },
+    onLeave: function(origin, destination, direction){
+      var dir = 0
+      if (direction == "down"){
+        dir = 1
+      }
+		  sounds.play(sectionSounds[origin.index][dir]);
+    }
+  });	
 </script>
 
 
