@@ -1,0 +1,76 @@
+{
+  "urls": [
+    "output.webm",
+    "output.mp3"
+  ],
+  "sprite": {
+    "111075__soundbytez__green-winged-macaw": [
+      0,
+      1250
+    ],
+    "127017__eelke__electronic-insect-droid-destruct-fx": [
+      3000,
+      5666.666666666668
+    ],
+    "161303__robinhood76__03498-fake-cat": [
+      10000,
+      8752.630385487528
+    ],
+    "186899__tritus__whale": [
+      20000,
+      10483.809523809527
+    ],
+    "212764__qubodup__lion-roar": [
+      32000,
+      6559.727891156463
+    ],
+    "395407__littlerainyseasons__laugh-track-4": [
+      40000,
+      2059.5464852607674
+    ],
+    "396333__savvahsjuhengof__mosquito-buzz": [
+      44000,
+      57260.43083900227
+    ],
+    "437975__craigsmith__g12-42-artificial-animal-growls": [
+      103000,
+      90761.38321995466
+    ],
+    "439520__inspectorj__green-toy-pig-squeaking-a": [
+      195000,
+      585.7596371882039
+    ],
+    "442879__qubodup__elephant-scream-fake": [
+      197000,
+      2398.73015873016
+    ],
+    "445119__breviceps__animal-cartoon-cooing-curr": [
+      201000,
+      1505.0793650793537
+    ],
+    "445120__breviceps__cartoon-chihuahua-snarl": [
+      204000,
+      1150.0000000000057
+    ],
+    "474360__mr-jj__dove-like-bird-cooing": [
+      207000,
+      12829.024943310656
+    ],
+    "479749__craigsmith__r14-14-fake-horse": [
+      221000,
+      32565.668934240362
+    ],
+    "57682__sound-master__animal-2-horror": [
+      255000,
+      2597.369614512445
+    ],
+    "60087__lone-wolf__animalgrowl": [
+      259000,
+      6776.5079365079255
+    ],
+    "72464__rockwehrmann__elephant1": [
+      267000,
+      3413.3333333333553
+    ]
+  }
+}
