@@ -280,48 +280,56 @@ var sounds = new Howl({
       39000,
       9954.195011337866
     ],
-    "kote": [
+    "kote1": [
       50000,
-      7530.249433106575
+      2033.1065759637213
+    ],
+    "kote2": [
+      54000,
+      2093.5827664399085
+    ],
+    "kote3": [
+      58000,
+      3640.3854875283414
     ],
     "koza": [
-      59000,
-      585.759637188211
+      63000,
+      1745.3741496598668
     ],
     "lidi": [
-      61000,
+      66000,
       2115.9183673469356
     ],
     "lion": [
-      65000,
+      70000,
       6559.727891156455
     ],
     "moskit": [
-      73000,
+      78000,
       13949.387755102038
     ],
     "rururara": [
-      88000,
+      93000,
       2304.217687074825
     ],
     "slon": [
-      92000,
+      97000,
       1497.6870748299261
     ],
     "slonolev": [
-      95000,
+      100000,
       2910.702947845806
     ],
     "sovicka": [
-      99000,
+      104000,
       12904.489795918365
     ],
     "velryba": [
-      113000,
-      10483.809523809527
+      118000,
+      7030.6575963718815
     ],
     "vlk": [
-      125000,
+      127000,
       4007.981859410421
     ]
   }
@@ -352,7 +360,7 @@ var sounds = new Howl({
 	[["jelen","vlk"], ["koza","jelen"], ["vlk","koza"]],
 	[["random","dlouhyslon"], ["lion","random"], ["dlouhyslon","lion"]],
 	[["velryba","chivava"], ["kachna","velryba"], ["chivava","kachna"]],
-	[["",""], ["",""], ["",""]],
+	[["kote3","kote2"], ["kote1","kote3"], ["kote2","kote1"]],
 	[["sovicka","dinosaur"], ["rururara","moskit"], ["dinosaur","sovicka"], ["moskit","rururara"]],
   ]
 
@@ -363,9 +371,9 @@ var sounds = new Howl({
 	["bzuk", "koza"],
 	["slonolev", "lion"],
 	["koza", "kachna"],
-	["lion", ""],
+	["lion", "kote1"],
 	["kachna", "rururara"],
-	["", ""],
+	["kote1", ""],
   ]
 
   var myFullpage = new fullpage('#fullpage', {
