@@ -1,7 +1,16 @@
-.credits {
+#creditsbutton {
     color: white;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    margin: 50px;
+}
+
+#credits {
+    color: white;
+    display: none;
+    margin: 50px;
 }
 
 a { 
     color: inherit;
-} 
+}
